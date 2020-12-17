@@ -2,10 +2,10 @@
 import store, {AppState} from "../stores/store";
 import {Dispatch} from "redux";
 import {connect} from "react-redux";
-import {TopPage} from "../components/TopPage";
+import {TopPage} from "../pages/TopPage";
 import {TextInputActions} from "../actions/action";
 import {socket} from "../socket";
-import {VoteBody} from "../types/type";
+import {GetBody} from "../types/type";
 
 export interface TopPageHandler {
     handleOnSelectValue(value: string): void
@@ -28,8 +28,8 @@ const mapStateToProps = (appState: AppState) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
-            console.log("sended")
-            socket.send(`{"action":"VOTE","pattern":"${value}","uid":"AABBCCEE"}`)
+            console.log(`{"action":"VOTE","pattern":"${value}","uid":"AABBCCEE"}`)
+            socket.send(`{"action":"VOTE","pattern":${value},"uid":"AABBCCEE"}`)
             socket.onmessage = function (e) {
                 dispatch(TextInputActions.updateSelectedValue(e.data))
             }
@@ -40,8 +40,8 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
         handleGetCurrentState: () => {
             socket.send("{\"action\":\"GET\"}")
             socket.onmessage = function (e) {
-                //Todo ここのベタープラクティスを教えて欲しい
-                const data: VoteBody = JSON.parse(e.data);
+                //Todo ここにロジック入れてるんですがよろしいんでしょうか？
+                const data: GetBody = JSON.parse(e.data);
                 console.log(data)
                 dispatch(TextInputActions.fetchVoteData(data))
                 //console.log(data.illuminationData.pattern1)

@@ -1,5 +1,5 @@
 import React from 'react'
-import {VoteBody} from "../types/type";
+import {GetBody} from "../types/type";
 
 
 //Todo バッドコードな気がする

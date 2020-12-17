@@ -12,7 +12,7 @@
 //     pattern4: number,
 // }
 
-export interface VoteBody {
+export interface GetBody {
     pods: number,
     illuminationPattern: number,
     illuminationData: illuminationData,
@@ -23,4 +23,9 @@ interface illuminationData {
     pattern2: number,
     pattern3: number,
     pattern4: number,
+}
+
+export interface VoteCallbackBody {
+    response: string,
+    currentData: GetBody
 }

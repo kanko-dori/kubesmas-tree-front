@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ba3d1d0-c24b-42f8-97a4-28a0a67bc179" name="Default Changelist" comment="" />
+    <list default="true" id="5ba3d1d0-c24b-42f8-97a4-28a0a67bc179" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CurrentState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VoteStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VoteStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/type.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +25,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lg8sGTkghnjRsKtqbGnO1RUR7U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\notch_man\kubemas\src\pages" />
       <recent name="\\wsl$\Ubuntu\home\notch_man\kubemas\src\stores" />
       <recent name="\\wsl$\Ubuntu\home\notch_man\kubemas\src\action" />
       <recent name="\\wsl$\Ubuntu\home\notch_man\kubemas\src\containers" />
@@ -66,12 +81,23 @@
       <updated>1608007579377</updated>
       <workItem from="1608007580525" duration="20470000" />
       <workItem from="1608076043155" duration="14546000" />
-      <workItem from="1608165928547" duration="747000" />
+      <workItem from="1608165928547" duration="4382000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

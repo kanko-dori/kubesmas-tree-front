@@ -13,8 +13,8 @@ export const ShowState: React.FC<Props> = props => {
         <div>
             <label>[states]</label>
             <div>{props.selectedValue}</div>
-            <div>{props.clickCount}</div>
-            <div>{props.connected}</div>
+            {/*<div>{props.clickCount}</div>*/}
+            {/*<div>{props.connected}</div>*/}
         </div>
     )
 }

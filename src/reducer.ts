@@ -1,6 +1,6 @@
 import {reducerWithInitialState} from "typescript-fsa-reducers";
 import {TextInputActions} from "./actions/action";
-import {VoteBody} from "./types/type";
+import {GetBody} from "./types/type";
 
 export interface State {
     selectedValue: string,
@@ -21,7 +21,7 @@ export const Reducer = reducerWithInitialState(initialState)
     .case(TextInputActions.updateClickCount, (state) => {
         return {...state, clickCount: state.clickCount + 1}
     })
-    .case(TextInputActions.fetchVoteData, (state: State, voteBody: VoteBody) => {
+    .case(TextInputActions.fetchVoteData, (state: State, voteBody: GetBody) => {
         return {...state, pods: voteBody.pods + 114514}
     })
 
