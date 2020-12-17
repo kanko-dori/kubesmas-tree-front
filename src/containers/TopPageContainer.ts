@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 import {TopPage} from "../pages/TopPage";
 import {TextInputActions} from "../actions/action";
 import {socket} from "../socket";
-import {GetBody} from "../types/type";
+import {GetBody, VoteCallbackBody} from "../types/type";
 
 export interface TopPageHandler {
     handleOnSelectValue(value: string): void
@@ -20,7 +20,9 @@ const mapStateToProps = (appState: AppState) => {
         selectedValue: appState.state.selectedValue,
         clickCount: appState.state.clickCount,
         connected: appState.socket.connected,
-        pods:appState.state.pods
+        pods: appState.state.pods,
+        pattern: appState.state.pattern,
+        patterns: appState.state.patterns
     }
 }
 
@@ -31,7 +33,12 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
             console.log(`{"action":"VOTE","pattern":"${value}","uid":"AABBCCEE"}`)
             socket.send(`{"action":"VOTE","pattern":${value},"uid":"AABBCCEE"}`)
             socket.onmessage = function (e) {
-                dispatch(TextInputActions.updateSelectedValue(e.data))
+                const data: VoteCallbackBody = JSON.parse(e.data)
+                //投票結果のイベント発火
+                dispatch(TextInputActions.fetchVoteData(data.currentData))
+                // console.log(data.currentData)
+                //投票結果のレスポンスのイベント発火
+                dispatch(TextInputActions.updateSelectedValue(data.response))
             }
         },
         handleOnClick: () => {
@@ -42,7 +49,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
             socket.onmessage = function (e) {
                 //Todo ここにロジック入れてるんですがよろしいんでしょうか？
                 const data: GetBody = JSON.parse(e.data);
-                console.log(data)
+                //console.log(data)
                 dispatch(TextInputActions.fetchVoteData(data))
                 //console.log(data.illuminationData.pattern1)
             }

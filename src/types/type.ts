@@ -18,7 +18,7 @@ export interface GetBody {
     illuminationData: illuminationData,
 }
 
-interface illuminationData {
+export interface illuminationData {
     pattern1: number,
     pattern2: number,
     pattern3: number,
