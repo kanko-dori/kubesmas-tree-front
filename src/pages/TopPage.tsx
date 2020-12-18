@@ -12,6 +12,10 @@ interface OwnProps {
     clickCount: number,
     connected: boolean,
     pods: number,
+    //現在のイルミネーションパターンと思われ
+    pattern: number,
+    //各イルミネーションの統計
+    patterns: number[],
 }
 
 type Props = OwnProps & TopPageHandler
@@ -19,7 +23,6 @@ type Props = OwnProps & TopPageHandler
 const socket = new WebSocket('ws://20.194.207.252/ws');
 
 export class TopPage extends React.Component<Props> {
-
     componentWillMount() {
         // socket.onopen = this.props.handleTest
         socket.onopen = function (ev) {
@@ -49,7 +52,7 @@ export class TopPage extends React.Component<Props> {
                 <SubmitButton title='test' onClick={this.props.handleGetCurrentState}/>
                 <ShowState selectedValue={this.props.selectedValue} connected={this.props.connected}
                            clickCount={this.props.clickCount}/>
-                <VoteStatus pods={this.props.pods}/>
+                <VoteStatus pods={this.props.pods} pattern={this.props.pattern} patterns={this.props.patterns}/>
             </React.Fragment>
         )
     }

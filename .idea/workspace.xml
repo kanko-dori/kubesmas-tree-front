@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5ba3d1d0-c24b-42f8-97a4-28a0a67bc179" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CurrentState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrentState.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RadioInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RadioInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/VoteStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VoteStatus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/type.ts" afterDir="false" />
     </list>
@@ -81,7 +82,7 @@
       <updated>1608007579377</updated>
       <workItem from="1608007580525" duration="20470000" />
       <workItem from="1608076043155" duration="14546000" />
-      <workItem from="1608165928547" duration="4382000" />
+      <workItem from="1608165928547" duration="8772000" />
     </task>
     <servers />
   </component>
@@ -104,12 +105,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/containers/TopPageContainer.ts</url>
-          <line>29</line>
+          <line>31</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/containers/TopPageContainer.ts</url>
-          <line>28</line>
+          <line>30</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
