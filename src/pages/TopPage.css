@@ -1,0 +1,17 @@
+.TopPage {
+  width: 100vmin;
+  height: 100vmin;
+
+  position: relative;
+}
+
+.TopPage-title {
+  font-size: 1.6rem;
+  font-weight: lighter;
+
+  position: absolute;
+  top: 5vmin;
+  left: 5vmin;
+
+  z-index: 1000;
+}

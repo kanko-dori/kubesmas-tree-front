@@ -1,0 +1,31 @@
+.RadioInput {
+  position: absolute;
+  top: 54vmin;
+  left: 12vmin;
+}
+
+.RadioInput-input {
+  display: none;
+}
+
+.RadioInput-label {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.RadioInput-title {
+  position: absolute;
+  z-index: 100;
+  left: 55vmin;
+  top: 1vmin;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.RadioInput-title p {
+
+}
