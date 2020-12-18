@@ -11,7 +11,7 @@ export interface State {
 }
 
 export const initialState: State = {
-    selectedValue: '',
+    selectedValue: '0',
     clickCount: 0,
     pods: 0,
     pattern: 1,
