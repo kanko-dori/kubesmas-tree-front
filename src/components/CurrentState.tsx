@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './CurrentState.css';
 
 interface OwnProps {
     selectedValue: string,
@@ -10,11 +11,9 @@ type Props = OwnProps
 
 export const ShowState: React.FC<Props> = props => {
     return (
-        <div>
-            <label>[states]</label>
-            <div>{props.selectedValue}</div>
-            {/*<div>{props.clickCount}</div>*/}
-            {/*<div>{props.connected}</div>*/}
+        <div className="ShowState">
+            <p className="ShowState-count">{props.selectedValue}</p>
+            <p className="ShowState-sub">connected</p>
         </div>
     )
 }
