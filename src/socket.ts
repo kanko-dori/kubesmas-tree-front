@@ -1,6 +1,7 @@
 import {Dispatch} from "redux";
 import {reducerWithInitialState} from "typescript-fsa-reducers";
 import {WebSocketActions} from "./actions/SocketAction";
+import { wsEndpoint } from "./constants";
 
 const SOCKET_CONNECTION_INIT = 'SOCKET_CONNECTION_INIT';
 const SOCKET_CONNECTION_SUCESS = 'SOCKET_CONNECTION_SUCCESS';
@@ -8,7 +9,7 @@ const SOCKET_CONNECTION_ERROR = 'SOCKET_CONNECTION_ERROR';
 const SOCKET_CONNECTION_CLOSED = 'SOCKET_CONNECTION_CLOSED';
 const SOCKET_MESSAGE = 'SOCKET_MESSAGE';
 
-export const socket = new WebSocket('ws://20.194.207.252/ws');
+export const socket = new WebSocket(wsEndpoint);
 
 // dispatch(socketConnectionInit(socket));
 
