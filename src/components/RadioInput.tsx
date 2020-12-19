@@ -19,8 +19,8 @@ export const RadioInput: React.FC<Props> = props => {
     return (
         <div className="RadioInput">
             <h3 className="RadioInput-title">
-                <p>lighting</p>
-                <p>Vote</p>
+                <p className="RadioInput-title-lighting">lighting</p>
+                <p className="RadioInput-title-vote">Vote</p>
             </h3>
             <Hexagon size={18} top={16} left={0}>
                 <input

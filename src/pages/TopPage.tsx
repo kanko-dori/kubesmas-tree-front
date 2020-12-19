@@ -49,8 +49,8 @@ export class TopPage extends React.Component<Props> {
         return (
             <div className="TopPage">
                 <h1 className="TopPage-title">
-                    <p>kubesmas</p>
-                    <p>tree</p>
+                    <p className="TopPage-title-kubesmas">kubesmas</p>
+                    <p className="TopPage-title-tree">tree</p>
                 </h1>
                 <Hexagon size={10} top={29} left={78}>
                     <Calendar />
