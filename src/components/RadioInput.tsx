@@ -49,7 +49,7 @@ export const RadioInput: React.FC<Props> = props => {
                         value='3'
                         onChange={(e) => props.onChangeValue(e.target.value)}
                     />
-                    <span className="RadioInput-pattern-name">Rainbow</span>
+                    <span className="RadioInput-pattern-name">Random</span>
                 </label>
             </Hexagon>
         </div>
