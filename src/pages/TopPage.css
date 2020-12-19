@@ -1,8 +1,11 @@
 .TopPage {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+
   width: 100vmin;
   height: 100vmin;
-
-  position: relative;
 }
 
 .TopPage-title {

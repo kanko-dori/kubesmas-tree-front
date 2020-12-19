@@ -1,13 +1,12 @@
 import React from 'react';
+import { Calendar } from '../components/Calendar';
 import { Clock } from "../components/Clock";
 import { ShowState } from "../components/CurrentState";
 import { Hexagon } from '../components/Hexagon';
 import { RadioInput } from "../components/RadioInput";
-import { wsEndpoint } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
+import { socket } from "../socket";
 import './TopPage.css';
-import { Calendar } from '../components/Calendar';
-import {socket} from "../socket";
 
 interface OwnProps {
     inputValue: string,

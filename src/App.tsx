@@ -1,9 +1,11 @@
 import React from 'react';
 import TopPageContainer from './containers/TopPageContainer';
+import { Splash } from './components/Splash';
 
 const App: React.FC = () => {
     return (
         <React.Fragment>
+            <Splash />
             <TopPageContainer/>
         </React.Fragment>
     );
