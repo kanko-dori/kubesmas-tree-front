@@ -1,16 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import TopPageContainer from './containers/TopPageContainer';
+import liff from '@line/liff';
+import React, { useEffect } from 'react';
 import { Splash } from './components/Splash';
-
-import {myLiffId} from "./constants";
+import { myLiffId } from "./constants";
+import TopPageContainer from './containers/TopPageContainer';
 
 const App: React.FC = () => {
-    const [value, setValue] = useState<string>('')
-    const [isLogin, setIsLogin] = useState<boolean>(false)
     useEffect(() => {
-        liff.init({liffId: myLiffId}).then(() => {
-            setIsLogin(liff.isLoggedIn())
-        })
+        liff.init({liffId: myLiffId}).catch(console.error)
     }, [])
 
     return (
