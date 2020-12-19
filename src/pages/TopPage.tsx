@@ -6,9 +6,7 @@ import { Hexagon } from '../components/Hexagon';
 import { RadioInput } from "../components/RadioInput";
 import { interval } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
-import { socket } from "../socket";
 import './TopPage.css';
-import { Calendar } from '../components/Calendar';
 
 interface OwnProps {
     inputValue: string,
