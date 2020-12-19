@@ -26,8 +26,6 @@ type Props = OwnProps & TopPageHandler
 //const socket = new WebSocket(wsEndpoint);
 
 export class TopPage extends React.Component<Props> {
-
-
     componentWillMount() {
         // socket.onopen = this.props.handleTest
 
@@ -35,7 +33,6 @@ export class TopPage extends React.Component<Props> {
 
     componentDidMount() {
         //初回アップデート
-        this.props.handleGetCurrentState()
         setInterval(this.props.handleGetCurrentState, interval)
     }
 
@@ -65,7 +62,6 @@ export class TopPage extends React.Component<Props> {
                         clickCount={this.props.clickCount}
                     />
                 </Hexagon>
-                {/*こいつを使えば現在の投票状況をチェック出来ます*/}
                 {/* <VoteStatus pods={this.props.pods} pattern={this.props.pattern} patterns={this.props.patterns}/> */}
             </div>
         )

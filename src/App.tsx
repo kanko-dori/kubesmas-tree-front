@@ -1,24 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import TopPageContainer from './containers/TopPageContainer';
 
-import {useLiff} from 'react-liff';
-
 const App: React.FC = () => {
-    const [value, setValue] = useState<string>('')
-    const [isLogin, setIsLogin] = useState<boolean>(false)
-    useEffect(() => {
-        liff.init({liffId: process.env.REACT_APP_LIFF_ID as string}).then(() => {
-            setIsLogin(liff.isLoggedIn())
-        })
-    }, [])
-
     return (
         <React.Fragment>
             <TopPageContainer/>
         </React.Fragment>
     );
-// }
 }
+
 
 // function App() {
 //   return (
