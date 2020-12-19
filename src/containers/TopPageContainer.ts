@@ -37,8 +37,9 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
                 }
                 liff.getProfile().then(profile => {
                     const id: string = profile.userId == null ? "AABBCCEE" : profile.userId
+                    console.log(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
                     if (socket.readyState === WebSocket.OPEN) {
-                        socket.send(`{"action":"VOTE","pattern":${value},"uid":${id}`)
+                        socket.send(`{"action":"VOTE","pattern":${value},"uid":"${id}"`)
                         socket.onmessage = function (e) {
                             const data: VoteCallbackBody = JSON.parse(e.data)
                             //console.log(data);

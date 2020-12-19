@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import TopPageContainer from './containers/TopPageContainer';
 
-import {useLiff} from 'react-liff';
+import {myLiffId} from "./constants";
 
 const App: React.FC = () => {
     const [value, setValue] = useState<string>('')
     const [isLogin, setIsLogin] = useState<boolean>(false)
     useEffect(() => {
-        liff.init({liffId: process.env.REACT_APP_LIFF_ID as string}).then(() => {
+        liff.init({liffId: myLiffId}).then(() => {
             setIsLogin(liff.isLoggedIn())
         })
     }, [])
