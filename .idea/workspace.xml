@@ -19,8 +19,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/Hexagon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hexagon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hexagon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hexagon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RadioInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RadioInput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RadioInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RadioInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TopPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />

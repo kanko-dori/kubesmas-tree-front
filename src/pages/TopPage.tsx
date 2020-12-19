@@ -54,8 +54,6 @@ export class TopPage extends React.Component<Props> {
                     selectedValue={this.props.selectedValue}
                     onChangeValue={this.props.handleOnSelectValue}
                 />
-                {/*<SubmitButton title='Click me' onClick={this.props.handleOnClick}/>
-                <SubmitButton title='test' onClick={this.props.handleGetCurrentState}/>*/}
                 <Hexagon size={25} top={25} left={1}>
                     <ShowState
                         selectedValue={this.props.selectedValue}
@@ -63,7 +61,6 @@ export class TopPage extends React.Component<Props> {
                         clickCount={this.props.clickCount}
                     />
                 </Hexagon>
-                {/* <VoteStatus pods={this.props.pods} pattern={this.props.pattern} patterns={this.props.patterns}/> */}
             </div>
         )
     }
