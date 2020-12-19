@@ -6,6 +6,7 @@ import {TopPage} from "../pages/TopPage";
 import {TextInputActions} from "../actions/action";
 import {socket} from "../socket";
 import {GetBody, VoteCallbackBody} from "../types/type";
+import {myLiffId} from "../constants";
 
 export interface TopPageHandler {
     handleOnSelectValue(value: string): void
@@ -30,19 +31,27 @@ const mapStateToProps = (appState: AppState) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
-            console.log(`{"action":"VOTE","pattern":"${value}","uid":"AABBCCEE"}`)
-            if (socket.readyState === WebSocket.OPEN) {
-                socket.send(`{"action":"VOTE","pattern":${value},"uid":"AABBCCEE"}`)
-                socket.onmessage = function (e) {
-                    const data: VoteCallbackBody = JSON.parse(e.data)
-                    //console.log(data);
-                    //投票結果のイベント発火
-                    dispatch(TextInputActions.fetchVoteData(data.currentData))
-                    //console.log(data.currentData)
-                    //投票結果のレスポンスのイベント発火
-                    dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+            liff.init({liffId: myLiffId}).then(() => {
+                if (!liff.isLoggedIn()) {
+                    liff.login()
                 }
-            }
+                liff.getProfile().then(profile => {
+                    const id: string = profile.userId == null ? "AABBCCEE" : profile.userId
+                    if (socket.readyState === WebSocket.OPEN) {
+                        socket.send(`{"action":"VOTE","pattern":${value},"uid":${id}`)
+                        socket.onmessage = function (e) {
+                            const data: VoteCallbackBody = JSON.parse(e.data)
+                            //console.log(data);
+                            //投票結果のイベント発火
+                            dispatch(TextInputActions.fetchVoteData(data.currentData))
+                            //console.log(data.currentData)
+                            //投票結果のレスポンスのイベント発火
+                            dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+                        }
+                    }
+                })
+
+            })
         },
 
         handleGetCurrentState: () => {

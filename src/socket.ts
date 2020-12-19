@@ -13,35 +13,36 @@ const SOCKET_MESSAGE = 'SOCKET_MESSAGE';
 export var socket: WebSocket = new WebSocket(wsEndpoint)
 
 socket.onopen = function (ev) {
-  //  console.log("Success")
+    //  console.log("Success")
 }
 socket.onerror = function (ev) {
-  //  console.log("Error")
+    //  console.log("Error")
 }
 socket.onclose = function (ev) {
-  //  console.log(ev.code)
-  //  console.log("Reconnect")
-    socket = new WebSocket(wsEndpoint)
+    //  console.log(ev.code)
+    //  console.log("Reconnect")
+    //  socket = new WebSocket(wsEndpoint)
+    createConnect()
 }
 socket.onmessage = function (ev) {
 //    console.log(ev.data)
 }
 
-// function createConnect() {
-//     socket = createInstance()
-//     socket.onopen = function (ev) {
-//         console.log("Success")
-//     }
-//     socket.onerror = function (ev) {
-//         console.log("Error")
-//     }
-//     socket.onclose = function (ev) {
-//         console.log(ev.code)
-//     }
-//     socket.onmessage = function (ev) {
-//         console.log(ev.data)
-//     }
-// }
+function createConnect() {
+    socket = new WebSocket(wsEndpoint)
+    socket.onopen = function (ev) {
+        console.log("Success")
+    }
+    socket.onerror = function (ev) {
+        console.log("Error")
+    }
+    socket.onclose = function (ev) {
+        console.log(ev.code)
+    }
+    socket.onmessage = function (ev) {
+        console.log(ev.data)
+    }
+}
 
 // //10秒ごとにコネクションチェック
 // cron.schedule('*/10 * * * * *', () => {
