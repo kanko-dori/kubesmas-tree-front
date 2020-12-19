@@ -7,11 +7,14 @@
 .RadioInput-input {
   display: none;
 }
-
+.RadioInput-input:checked + .RadioInput-label {
+  background-color: rgb(1, 50, 30);
+}
 .RadioInput-label {
   width: 100%;
   height: 100%;
   background-color: black;
+  transition: background-color ease 0.5s;
   display: flex;
 
   justify-content: center;
