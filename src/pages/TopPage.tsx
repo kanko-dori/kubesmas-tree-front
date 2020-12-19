@@ -1,12 +1,12 @@
 import React from 'react';
-import { Clock } from "../components/Clock";
-import { ShowState } from "../components/CurrentState";
-import { Hexagon } from '../components/Hexagon';
-import { RadioInput } from "../components/RadioInput";
-import { wsEndpoint } from '../constants';
-import { TopPageHandler } from "../containers/TopPageContainer";
+import {Clock} from "../components/Clock";
+import {ShowState} from "../components/CurrentState";
+import {Hexagon} from '../components/Hexagon';
+import {RadioInput} from "../components/RadioInput";
+import {interval, wsEndpoint} from '../constants';
+import {TopPageHandler} from "../containers/TopPageContainer";
 import './TopPage.css';
-import { Calendar } from '../components/Calendar';
+import {Calendar} from '../components/Calendar';
 import {socket} from "../socket";
 
 interface OwnProps {
@@ -19,6 +19,7 @@ interface OwnProps {
     pattern: number,
     //各イルミネーションの統計
     patterns: number[],
+
 }
 
 type Props = OwnProps & TopPageHandler
@@ -42,9 +43,10 @@ export class TopPage extends React.Component<Props> {
         }
     }
 
-    componentWillUnmount() {
-        // socket.close()
+    componentDidMount() {
+        setInterval(this.props.handleGetCurrentState, interval)
     }
+
 
     render() {
         return (
@@ -54,10 +56,10 @@ export class TopPage extends React.Component<Props> {
                     <p>tree</p>
                 </h1>
                 <Hexagon size={25} top={2.5} left={40}>
-                    <Calendar />
+                    <Calendar/>
                 </Hexagon>
                 <Hexagon size={25} top={2.5} left={40}>
-                    <Clock />
+                    <Clock/>
                 </Hexagon>
                 <RadioInput
                     selectedValue={this.props.selectedValue}

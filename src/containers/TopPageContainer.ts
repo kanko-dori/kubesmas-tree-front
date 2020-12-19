@@ -46,6 +46,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
             dispatch(TextInputActions.updateClickCount())
         },
         handleGetCurrentState: () => {
+            console.log("interval method")
             socket.send("{\"action\":\"GET\"}")
             socket.onmessage = function (e) {
                 //Todo ここにロジック入れてるんですがよろしいんでしょうか？
