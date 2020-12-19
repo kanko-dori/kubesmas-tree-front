@@ -2,7 +2,7 @@ import React from 'react';
 import './CurrentState.css';
 
 interface OwnProps {
-    selectedValue: string,
+    selectedValue: number,
     clickCount: number,
     connected: boolean
 }

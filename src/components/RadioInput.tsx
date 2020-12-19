@@ -3,14 +3,14 @@ import './RadioInput.css';
 import { Hexagon } from './Hexagon';
 
 interface OwnProps {
-    selectedValue: string,
+    selectedValue: number,
     onChangeValue: Function
 }
 
 type Props = OwnProps
 
 export const RadioInput: React.FC<Props> = props => {
-    const [checked, setChecked] = useState('1');
+    const [checked, setChecked] = useState('');
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.onChangeValue(e.target.value);

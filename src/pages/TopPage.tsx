@@ -4,13 +4,15 @@ import { Clock } from "../components/Clock";
 import { ShowState } from "../components/CurrentState";
 import { Hexagon } from '../components/Hexagon';
 import { RadioInput } from "../components/RadioInput";
+import { interval } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
 import { socket } from "../socket";
 import './TopPage.css';
+import { Calendar } from '../components/Calendar';
 
 interface OwnProps {
     inputValue: string,
-    selectedValue: string,
+    selectedValue: number,
     clickCount: number,
     connected: boolean,
     pods: number,
@@ -18,6 +20,7 @@ interface OwnProps {
     pattern: number,
     //各イルミネーションの統計
     patterns: number[],
+
 }
 
 type Props = OwnProps & TopPageHandler
@@ -25,24 +28,17 @@ type Props = OwnProps & TopPageHandler
 //const socket = new WebSocket(wsEndpoint);
 
 export class TopPage extends React.Component<Props> {
+
+
     componentWillMount() {
         // socket.onopen = this.props.handleTest
-        socket.onopen = function (ev) {
-            console.log("Success")
-        }
-        socket.onerror = function (ev) {
-            console.log("Error")
-        }
-        socket.onclose = function (ev) {
-            console.log(ev.code)
-        }
-        socket.onmessage = function (ev) {
-            console.log(ev.data)
-        }
+
     }
 
-    componentWillUnmount() {
-        // socket.close()
+    componentDidMount() {
+        //初回アップデート
+        this.props.handleGetCurrentState()
+        setInterval(this.props.handleGetCurrentState, interval)
     }
 
     render() {
@@ -52,10 +48,10 @@ export class TopPage extends React.Component<Props> {
                     <p className="TopPage-title-kubesmas">kubesmas</p>
                     <p className="TopPage-title-tree">tree</p>
                 </h1>
-                <Hexagon size={10} top={29} left={78}>
+                <Hexagon size={25} top={2.5} left={40}>
                     <Calendar />
                 </Hexagon>
-                <Hexagon size={25} top={2.5} left={35}>
+                <Hexagon size={25} top={2.5} left={40}>
                     <Clock />
                 </Hexagon>
                 <RadioInput
@@ -71,6 +67,7 @@ export class TopPage extends React.Component<Props> {
                         clickCount={this.props.clickCount}
                     />
                 </Hexagon>
+                {/*こいつを使えば現在の投票状況をチェック出来ます*/}
                 {/* <VoteStatus pods={this.props.pods} pattern={this.props.pattern} patterns={this.props.patterns}/> */}
             </div>
         )
