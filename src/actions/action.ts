@@ -1,5 +1,5 @@
 import actionCreatorFactory from "typescript-fsa";
-import {GetBody, VoteCallbackBody} from "../types/type";
+import { GetBody } from "../types/type";
 
 
 const actionCreator = actionCreatorFactory()
