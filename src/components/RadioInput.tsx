@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './RadioInput.css';
 import { Hexagon } from './Hexagon';
 
@@ -10,6 +10,12 @@ interface OwnProps {
 type Props = OwnProps
 
 export const RadioInput: React.FC<Props> = props => {
+    const [checked, setChecked] = useState('1');
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        props.onChangeValue(e.target.value);
+        setChecked(e.target.value);
+    }
     return (
         <div className="RadioInput">
             <h3 className="RadioInput-title">
@@ -17,38 +23,44 @@ export const RadioInput: React.FC<Props> = props => {
                 <p>Vote</p>
             </h3>
             <Hexagon size={18} top={16} left={0}>
-                <label className="RadioInput-label">
-                    <input
-                        type='radio'
-                        className="RadioInput-input"
-                        name='radio_group'
-                        value='1'
-                        onChange={(e) => props.onChangeValue(e.target.value)}
-                    />
+                <input
+                    type='radio'
+                    className="RadioInput-input"
+                    name='radio_group'
+                    value='1'
+                    id="radio1"
+                    onChange={onChange}
+                    checked={checked === '1' ? true : false}
+                />
+                <label htmlFor="radio1" className="RadioInput-label">
                     <span className="RadioInput-pattern-name">stAtic</span>
                 </label>
             </Hexagon>
             <Hexagon size={18} top={0} left={28}>
-                <label className="RadioInput-label">
-                    <input
-                        type='radio'
-                        className="RadioInput-input"
-                        name='radio_group'
-                        value='2'
-                        onChange={(e) => props.onChangeValue(e.target.value)}
-                    />
+                <input
+                    type='radio'
+                    className="RadioInput-input"
+                    name='radio_group'
+                    value='2'
+                    id="radio2"
+                    onChange={onChange}
+                    checked={checked === '2' ? true : false}
+                />
+                <label htmlFor="radio2" className="RadioInput-label">
                     <span className="RadioInput-pattern-name">Wave</span>
                 </label>
             </Hexagon>
             <Hexagon size={18} top={16} left={28*2}>
-                <label className="RadioInput-label">
-                    <input
-                        type='radio'
-                        className="RadioInput-input"
-                        name='radio_group'
-                        value='3'
-                        onChange={(e) => props.onChangeValue(e.target.value)}
-                    />
+                <input
+                    type='radio'
+                    className="RadioInput-input"
+                    name='radio_group'
+                    value='3'
+                    id="radio3"
+                    onChange={onChange}
+                    checked={checked === '3' ? true : false}
+                />
+                <label htmlFor="radio3" className="RadioInput-label">
                     <span className="RadioInput-pattern-name">Rainbow</span>
                 </label>
             </Hexagon>
