@@ -39,22 +39,20 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
                 dispatch(TextInputActions.fetchVoteData(data.currentData))
                 console.log(data.currentData)
                 //投票結果のレスポンスのイベント発火
-                dispatch(TextInputActions.updateSelectedValue(data.currentData.pods.toString()))
+                dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
             }
         },
-        handleOnClick: () => {
-            dispatch(TextInputActions.updateClickCount())
-        },
+
         handleGetCurrentState: () => {
-            console.log("interval method")
             socket.send("{\"action\":\"GET\"}")
             socket.onmessage = function (e) {
                 //Todo ここにロジック入れてるんですがよろしいんでしょうか？
                 const data: GetBody = JSON.parse(e.data);
-                console.log(data)
-                dispatch(TextInputActions.fetchVoteData(data))
-                console.log(data.illuminationData.pattern1)
+                console.log("Interval method")
+                // console.log(data)
+                dispatch(TextInputActions.updateSelectedValue(data.pods))
             }
+
         }
     }
 }

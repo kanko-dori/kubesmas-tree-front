@@ -11,7 +11,7 @@ import {socket} from "../socket";
 
 interface OwnProps {
     inputValue: string,
-    selectedValue: string,
+    selectedValue: number,
     clickCount: number,
     connected: boolean,
     pods: number,
@@ -29,24 +29,13 @@ type Props = OwnProps & TopPageHandler
 export class TopPage extends React.Component<Props> {
     componentWillMount() {
         // socket.onopen = this.props.handleTest
-        socket.onopen = function (ev) {
-            console.log("Success")
-        }
-        socket.onerror = function (ev) {
-            console.log("Error")
-        }
-        socket.onclose = function (ev) {
-            console.log(ev.code)
-        }
-        socket.onmessage = function (ev) {
-            console.log(ev.data)
-        }
+
     }
 
     componentDidMount() {
+        //初回アップデート
         setInterval(this.props.handleGetCurrentState, interval)
     }
-
 
     render() {
         return (

@@ -6,7 +6,7 @@ const actionCreator = actionCreatorFactory()
 
 export const TextInputActions = {
     //VOTE
-    updateSelectedValue: actionCreator<string>('ACTION_UPDATE_SELECTED_VALUE'),
+    updateSelectedValue: actionCreator<number>('ACTION_UPDATE_SELECTED_VALUE'),
     //GET
     fetchVoteData: actionCreator<GetBody>('ACTION_FETCH_VOTE_DATA'),
 
