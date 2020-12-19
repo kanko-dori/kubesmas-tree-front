@@ -8,6 +8,8 @@
 
   --bg-color: radial-gradient(circle, rgba(21,106,6,1) 0%, rgb(1, 22, 1) 64%, rgb(0, 10, 1) 100%);
   background: var(--bg-color);
+
+  animation: blink-show 0.8s linear 4.8s both;
 }
 
 .ShowState-sub {
