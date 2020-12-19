@@ -53,10 +53,10 @@ export class TopPage extends React.Component<Props> {
                     <p>kubesmas</p>
                     <p>tree</p>
                 </h1>
-                <Hexagon size={25} top={2.5} left={40}>
+                <Hexagon size={10} top={29} left={78}>
                     <Calendar />
                 </Hexagon>
-                <Hexagon size={25} top={2.5} left={40}>
+                <Hexagon size={25} top={2.5} left={35}>
                     <Clock />
                 </Hexagon>
                 <RadioInput
@@ -65,7 +65,7 @@ export class TopPage extends React.Component<Props> {
                 />
                 {/*<SubmitButton title='Click me' onClick={this.props.handleOnClick}/>
                 <SubmitButton title='test' onClick={this.props.handleGetCurrentState}/>*/}
-                <Hexagon size={25} top={25} left={1}>
+                <Hexagon size={25} top={25} left={-4}>
                     <ShowState
                         selectedValue={this.props.selectedValue}
                         connected={this.props.connected}
