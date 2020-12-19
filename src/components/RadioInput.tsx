@@ -22,7 +22,7 @@ export const RadioInput: React.FC<Props> = props => {
                         type='radio'
                         className="RadioInput-input"
                         name='radio_group'
-                        value='0'
+                        value='1'
                         onChange={(e) => props.onChangeValue(e.target.value)}
                     />
                     <span className="RadioInput-pattern-name">stAtic</span>
@@ -34,7 +34,7 @@ export const RadioInput: React.FC<Props> = props => {
                         type='radio'
                         className="RadioInput-input"
                         name='radio_group'
-                        value='1'
+                        value='2'
                         onChange={(e) => props.onChangeValue(e.target.value)}
                     />
                     <span className="RadioInput-pattern-name">Wave</span>
@@ -46,7 +46,7 @@ export const RadioInput: React.FC<Props> = props => {
                         type='radio'
                         className="RadioInput-input"
                         name='radio_group'
-                        value='2'
+                        value='3'
                         onChange={(e) => props.onChangeValue(e.target.value)}
                     />
                     <span className="RadioInput-pattern-name">Rainbow</span>

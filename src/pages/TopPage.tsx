@@ -7,6 +7,7 @@ import { wsEndpoint } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
 import './TopPage.css';
 import { Calendar } from '../components/Calendar';
+import {socket} from "../socket";
 
 interface OwnProps {
     inputValue: string,
@@ -22,7 +23,7 @@ interface OwnProps {
 
 type Props = OwnProps & TopPageHandler
 
-const socket = new WebSocket(wsEndpoint);
+//const socket = new WebSocket(wsEndpoint);
 
 export class TopPage extends React.Component<Props> {
     componentWillMount() {
@@ -42,7 +43,7 @@ export class TopPage extends React.Component<Props> {
     }
 
     componentWillUnmount() {
-        socket.close()
+        // socket.close()
     }
 
     render() {
