@@ -3,7 +3,7 @@ import './RadioInput.css';
 import { Hexagon } from './Hexagon';
 
 interface OwnProps {
-    selectedValue: string,
+    selectedValue: number,
     onChangeValue: Function
 }
 
