@@ -1,10 +1,12 @@
 import React from 'react';
+import { Calendar } from '../components/Calendar';
 import { Clock } from "../components/Clock";
 import { ShowState } from "../components/CurrentState";
 import { Hexagon } from '../components/Hexagon';
 import { RadioInput } from "../components/RadioInput";
 import { interval } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
+import { socket } from "../socket";
 import './TopPage.css';
 import { Calendar } from '../components/Calendar';
 
@@ -43,8 +45,8 @@ export class TopPage extends React.Component<Props> {
         return (
             <div className="TopPage">
                 <h1 className="TopPage-title">
-                    <p>kubesmas</p>
-                    <p>tree</p>
+                    <p className="TopPage-title-kubesmas">kubesmas</p>
+                    <p className="TopPage-title-tree">tree</p>
                 </h1>
                 <Hexagon size={25} top={2.5} left={40}>
                     <Calendar />

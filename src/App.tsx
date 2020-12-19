@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import TopPageContainer from './containers/TopPageContainer';
+import { Splash } from './components/Splash';
 
 import {myLiffId} from "./constants";
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
 
     return (
         <React.Fragment>
+            <Splash />
             <TopPageContainer/>
         </React.Fragment>
     );
