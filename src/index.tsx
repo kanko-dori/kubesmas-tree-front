@@ -5,7 +5,6 @@
 // import './index.css';
 // import stores from './stores';
 // import reportWebVitals from "./reportWebVitals";
-import { LiffProvider } from 'react-liff';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -19,9 +18,7 @@ export const stubEnabled = process.env.NODE_ENV !== 'production';
 ReactDOM.render(
 
     <Provider store={store}>
-        <LiffProvider liffId={liffId} stubEnabled={stubEnabled}>
-            <App/>
-        </LiffProvider>
+        <App/>
     </Provider>
     , document.getElementById('root'));
 

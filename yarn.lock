@@ -1414,7 +1414,7 @@
     file-type "^15.0.0"
     form-data "^3.0.0"
 
-"@line/liff@>=2.3.0 <2.7.0", "@line/liff@^2.6.0":
+"@line/liff@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@line/liff/-/liff-2.6.0.tgz#e55dbbaaf49e436949137da5c8d8ef88f89d8e01"
   integrity sha512-2Db7Wc6FxOeKzXcEUoZS88zPaNTvKjFbZl5Pb3wn54BNguT2TXzv5USDabRAsuXjsGQHzJHGBi3eh8tvUzCrIg==
@@ -9302,13 +9302,6 @@ react-is@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
-
-react-liff@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-liff/-/react-liff-0.7.1.tgz#0470ca8edad1b0f23ca88fa61b5fbf1b47fe6db9"
-  integrity sha512-quoh/QfPfYk+4biUdtez+Om11vC1Afucb6uYDPwbPKxM64GutHb+Uf8UUG7ZITSsuckgsNdkZk+AMaMw7cpEQA==
-  optionalDependencies:
-    "@line/liff" ">=2.3.0 <2.7.0"
 
 react-redux@^7.2.2:
   version "7.2.2"
