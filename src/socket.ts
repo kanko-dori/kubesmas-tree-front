@@ -7,38 +7,41 @@ const SOCKET_CONNECTION_SUCESS = 'SOCKET_CONNECTION_SUCCESS';
 const SOCKET_CONNECTION_ERROR = 'SOCKET_CONNECTION_ERROR';
 const SOCKET_CONNECTION_CLOSED = 'SOCKET_CONNECTION_CLOSED';
 const SOCKET_MESSAGE = 'SOCKET_MESSAGE';
+
+
 export var socket: WebSocket = new WebSocket(wsEndpoint)
 
 socket.onopen = function (ev) {
-    console.log("Success")
+    //  console.log("Success")
 }
 socket.onerror = function (ev) {
-    console.log("Error")
+    //  console.log("Error")
 }
 socket.onclose = function (ev) {
-    console.log(ev.code)
-    console.log("Reconnect")
-    socket = new WebSocket(wsEndpoint)
+    //  console.log(ev.code)
+    //  console.log("Reconnect")
+    //  socket = new WebSocket(wsEndpoint)
+    createConnect()
 }
 socket.onmessage = function (ev) {
-    console.log(ev.data)
+//    console.log(ev.data)
 }
 
-// function createConnect() {
-//     socket = createInstance()
-//     socket.onopen = function (ev) {
-//         console.log("Success")
-//     }
-//     socket.onerror = function (ev) {
-//         console.log("Error")
-//     }
-//     socket.onclose = function (ev) {
-//         console.log(ev.code)
-//     }
-//     socket.onmessage = function (ev) {
-//         console.log(ev.data)
-//     }
-// }
+function createConnect() {
+    socket = new WebSocket(wsEndpoint)
+    socket.onopen = function (ev) {
+        console.log("Success")
+    }
+    socket.onerror = function (ev) {
+        console.log("Error")
+    }
+    socket.onclose = function (ev) {
+        console.log(ev.code)
+    }
+    socket.onmessage = function (ev) {
+        console.log(ev.data)
+    }
+}
 
 // //10秒ごとにコネクションチェック
 // cron.schedule('*/10 * * * * *', () => {
