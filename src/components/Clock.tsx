@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { zeroPadding } from '../utils';
 import './Clock.css';
 
 export const Clock: React.FC = () => {
@@ -17,8 +18,4 @@ export const Clock: React.FC = () => {
       <p className="Clock-minutes">{zeroPadding(date.getMinutes())}</p>
     </div>
   );
-};
-
-const zeroPadding = (num: number) => {
-  return ('0' + num).substr(-2);
 };
