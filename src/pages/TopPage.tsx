@@ -46,10 +46,10 @@ export class TopPage extends React.Component<Props> {
                     <p className="TopPage-title-kubesmas">kubesmas</p>
                     <p className="TopPage-title-tree">tree</p>
                 </h1>
-                <Hexagon size={25} top={2.5} left={40}>
+                <Hexagon size={10} top={29} left={78}>
                     <Calendar />
                 </Hexagon>
-                <Hexagon size={25} top={2.5} left={40}>
+                <Hexagon size={25} top={2.5} left={35}>
                     <Clock />
                 </Hexagon>
                 <RadioInput

@@ -19,8 +19,9 @@ export const stubEnabled = process.env.NODE_ENV !== 'production';
 ReactDOM.render(
 
     <Provider store={store}>
-        <LiffProvider liffId={liffId} stubEnabled={stubEnabled}/>
-        <App/>
+        <LiffProvider liffId={liffId} stubEnabled={stubEnabled}>
+            <App/>
+        </LiffProvider>
     </Provider>
     , document.getElementById('root'));
 

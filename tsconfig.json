@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "types": [
-      "liff-type"
-    ],
     "lib": [
       "dom",
       "dom.iterable",

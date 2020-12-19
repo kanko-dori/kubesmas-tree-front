@@ -1414,7 +1414,7 @@
     file-type "^15.0.0"
     form-data "^3.0.0"
 
-"@line/liff@>=2.3.0 <2.7.0":
+"@line/liff@>=2.3.0 <2.7.0", "@line/liff@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@line/liff/-/liff-2.6.0.tgz#e55dbbaaf49e436949137da5c8d8ef88f89d8e01"
   integrity sha512-2Db7Wc6FxOeKzXcEUoZS88zPaNTvKjFbZl5Pb3wn54BNguT2TXzv5USDabRAsuXjsGQHzJHGBi3eh8tvUzCrIg==
