@@ -34,6 +34,7 @@ export class TopPage extends React.Component<Props> {
 
     componentDidMount() {
         //初回アップデート
+        this.props.handleGetCurrentState()
         setInterval(this.props.handleGetCurrentState, interval)
     }
 

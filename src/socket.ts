@@ -8,6 +8,8 @@ const SOCKET_CONNECTION_SUCESS = 'SOCKET_CONNECTION_SUCCESS';
 const SOCKET_CONNECTION_ERROR = 'SOCKET_CONNECTION_ERROR';
 const SOCKET_CONNECTION_CLOSED = 'SOCKET_CONNECTION_CLOSED';
 const SOCKET_MESSAGE = 'SOCKET_MESSAGE';
+
+
 export var socket: WebSocket = new WebSocket(wsEndpoint)
 
 socket.onopen = function (ev) {

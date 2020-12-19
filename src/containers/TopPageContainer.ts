@@ -31,28 +31,31 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
             console.log(`{"action":"VOTE","pattern":"${value}","uid":"AABBCCEE"}`)
-            socket.send(`{"action":"VOTE","pattern":${value},"uid":"AABBCCEE"}`)
-            socket.onmessage = function (e) {
-                const data: VoteCallbackBody = JSON.parse(e.data)
-                //console.log(data);
-                //投票結果のイベント発火
-                dispatch(TextInputActions.fetchVoteData(data.currentData))
-                //console.log(data.currentData)
-                //投票結果のレスポンスのイベント発火
-                dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(`{"action":"VOTE","pattern":${value},"uid":"AABBCCEE"}`)
+                socket.onmessage = function (e) {
+                    const data: VoteCallbackBody = JSON.parse(e.data)
+                    //console.log(data);
+                    //投票結果のイベント発火
+                    dispatch(TextInputActions.fetchVoteData(data.currentData))
+                    //console.log(data.currentData)
+                    //投票結果のレスポンスのイベント発火
+                    dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+                }
             }
         },
 
         handleGetCurrentState: () => {
-            socket.send("{\"action\":\"GET\"}")
-            socket.onmessage = function (e) {
-                //Todo ここにロジック入れてるんですがよろしいんでしょうか？
-                const data: GetBody = JSON.parse(e.data);
-                //console.log("Interval method")
-                // console.log(data)
-                dispatch(TextInputActions.updateSelectedValue(data.pods))
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send("{\"action\":\"GET\"}")
+                socket.onmessage = function (e) {
+                    //Todo ここにロジック入れてるんですがよろしいんでしょうか？
+                    const data: GetBody = JSON.parse(e.data);
+                    //console.log("Interval method")
+                    // console.log(data)
+                    dispatch(TextInputActions.updateSelectedValue(data.pods))
+                }
             }
-
         }
     }
 }
