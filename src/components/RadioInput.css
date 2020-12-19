@@ -36,7 +36,9 @@
   font-size: 1rem;
   font-weight: lighter;
 }
-
+.RadioInput-title p {
+  position: relative;
+}
 .RadioInput-title-lighting::after {
   position: absolute;
   top: 0;
