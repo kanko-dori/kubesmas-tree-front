@@ -1,6 +1,7 @@
 import {reducerWithInitialState} from "typescript-fsa-reducers";
 import {TextInputActions} from "./actions/action";
 import {GetBody, illuminationData} from "./types/type";
+import {dispatchSpecialValue} from "./constants";
 
 export interface State {
     selectedValue: number,
@@ -27,7 +28,7 @@ export const Reducer = reducerWithInitialState(initialState)
         return {
             ...state,
             pods: voteBody.pods,
-            pattern: voteBody.illuminationPattern,
+            pattern: voteBody.pods < dispatchSpecialValue ? voteBody.illuminationPattern : 4,
             //Todo ここパターン数増減したときヤバいよね（Kotlinなら良い感じに書けるのに）
             patterns: mapIlluminationDataToNumArray(voteBody.illuminationData)
         }

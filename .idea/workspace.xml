@@ -30,12 +30,13 @@
       <change beforePath="$PROJECT_DIR$/src/components/Splash.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Splash.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Splash.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Splash.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/VoteStatus.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VoteStatus.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VoteStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VoteStatus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TopPageContainer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TopPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
