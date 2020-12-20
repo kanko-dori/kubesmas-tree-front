@@ -14,6 +14,7 @@ export const VoteStatus: React.FC<Props> = props => {
             {props.pattern === 1 && <p className="VoteStatus-pattern">&gt;static</p>}
             {props.pattern === 2 && <p className="VoteStatus-pattern">&gt;wave</p>}
             {props.pattern === 3 && <p className="VoteStatus-pattern">&gt;random</p>}
+            {props.pattern === 4 && <p className="VoteStatus-pattern">&gt;special</p>}
         </div>
     )
 }
