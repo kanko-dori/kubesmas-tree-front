@@ -7,6 +7,7 @@ import {TextInputActions} from "../actions/action";
 import {socket} from "../socket";
 import {GetBody, VoteCallbackBody} from "../types/type";
 import {myLiffId} from "../constants";
+import liff from "@line/liff";
 
 export interface TopPageHandler {
     handleOnSelectValue(value: string): void
