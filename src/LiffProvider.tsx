@@ -28,7 +28,7 @@ export const LiffInfoProvider: React.FC<{ children: ReactNode }> = ({ children }
       });
     } else if (process.env.NODE_ENV !== 'development') {
       liff.login();
-      setLoggedIn(liff.isLoggedIn());
+      setTimeout(() => setLoggedIn(liff.isLoggedIn()), 10*1000);
     }
   }, [loggedIn]);
 
