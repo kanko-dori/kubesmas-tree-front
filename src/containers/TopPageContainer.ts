@@ -31,12 +31,12 @@ const mapStateToProps = (appState: AppState) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
-            liff.init({liffId: myLiffId}).then(() => {
-                if (!liff.isLoggedIn()) {
-                    liff.login()
-                }else {
-                    liff.getProfile().then(profile => {
-                        const id: string = profile.userId == null ? "AABBCCEE" : profile.userId
+            //liff.init({liffId: myLiffId}).then(() => {
+            //    if (!liff.isLoggedIn()) {
+            //        liff.login()
+            //    }else {
+            //        liff.getProfile().then(profile => {
+                        const id = "AABBCCEE"
                         //console.log(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
                         if (socket.readyState === WebSocket.OPEN) {
                             socket.send(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
@@ -50,9 +50,9 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
                                 dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
                             }
                         }
-                    })
-                }
-            })
+            //        })
+            //    }
+            //})
         },
 
         handleGetCurrentState: () => {

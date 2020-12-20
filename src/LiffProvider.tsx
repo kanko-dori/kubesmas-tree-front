@@ -20,17 +20,17 @@ export const LiffInfoProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [loggedIn, setLoggedIn] = useState(liff.isLoggedIn());
   const [name, setName] = useState('');
   const [image, setImage] = useState(dummyIcon);
-  useEffect(() => {
-    if (loggedIn) {
-      liff.getProfile().then((prof) => {
-        setName(prof.displayName);
-        setImage(prof.pictureUrl ?? dummyIcon);
-      });
-    } else if (process.env.NODE_ENV !== 'development') {
-      liff.login();
-      setLoggedIn(liff.isLoggedIn());
-    }
-  }, [loggedIn]);
+  //useEffect(() => {
+  //  if (loggedIn) {
+  //    liff.getProfile().then((prof) => {
+  //      setName(prof.displayName);
+  //      setImage(prof.pictureUrl ?? dummyIcon);
+  //    });
+  //  } else if (process.env.NODE_ENV !== 'development') {
+  //    liff.login();
+  //    setLoggedIn(liff.isLoggedIn());
+  //  }
+  //}, [loggedIn]);
 
   return (
     <LiffInfoContext.Provider value={{ loggedIn, name, image }}>
