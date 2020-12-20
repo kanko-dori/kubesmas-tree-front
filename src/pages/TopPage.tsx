@@ -4,6 +4,7 @@ import { Clock } from "../components/Clock";
 import { ShowState } from "../components/CurrentState";
 import { Hexagon } from '../components/Hexagon';
 import { RadioInput } from "../components/RadioInput";
+import { VoteStatus } from '../components/VoteStatus';
 import { interval } from '../constants';
 import { TopPageHandler } from "../containers/TopPageContainer";
 import './TopPage.css';
@@ -46,10 +47,10 @@ export class TopPage extends React.Component<Props> {
                     <p className="TopPage-title-kubesmas">kubesmas</p>
                     <p className="TopPage-title-tree">tree</p>
                 </h1>
-                <Hexagon size={10} top={29} left={78}>
+                <Hexagon size={15} top={-3} left={59}>
                     <Calendar />
                 </Hexagon>
-                <Hexagon size={25} top={2.5} left={35}>
+                <Hexagon size={15} top={11} left={35}>
                     <Clock />
                 </Hexagon>
                 <RadioInput
@@ -65,8 +66,7 @@ export class TopPage extends React.Component<Props> {
                         clickCount={this.props.clickCount}
                     />
                 </Hexagon>
-                {/*こいつを使えば現在の投票状況をチェック出来ます*/}
-                {/* <VoteStatus pods={this.props.pods} pattern={this.props.pattern} patterns={this.props.patterns}/> */}
+                <VoteStatus pattern={this.props.pattern} />
             </div>
         )
     }

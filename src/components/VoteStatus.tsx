@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
+import './VoteStatus.css';
 
 interface OwnProps {
-    pods: number,
-    //現在のイルミネーションパターンと思われ
     pattern: number,
-    //各イルミネーションの統計
-    patterns: number[],
 }
 
 type Props = OwnProps
 
 export const VoteStatus: React.FC<Props> = props => {
     return (
-        <div>
-            <label>[Vote]</label>
-            <div>{`現在のPodの数：${props.pods}`}</div>
-            <div>{`現在のパターン：${props.pattern}`}</div>
+        <div className="VoteStatus">
+            <p className="VoteStatus-current">current</p>
+            {props.pattern === 1 && <p className="VoteStatus-pattern">&gt;static</p>}
+            {props.pattern === 2 && <p className="VoteStatus-pattern">&gt;wave</p>}
+            {props.pattern === 3 && <p className="VoteStatus-pattern">&gt;random</p>}
         </div>
     )
 }
