@@ -7,6 +7,7 @@ import {TextInputActions} from "../actions/action";
 import {socket} from "../socket";
 import {GetBody, VoteCallbackBody} from "../types/type";
 import {myLiffId} from "../constants";
+import liff from "@line/liff";
 
 export interface TopPageHandler {
     handleOnSelectValue(value: string): void
@@ -32,9 +33,10 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
             liff.init({liffId: myLiffId}).then(() => {
-                if (!liff.isLoggedIn()) {
-                    liff.login()
-                }
+                //if (!liff.isLoggedIn()) {
+                //    console.log('b')
+                //    liff.login()
+                //}
                 liff.getProfile().then(profile => {
                     const id: string = profile.userId == null ? "AABBCCEE" : profile.userId
                     //console.log(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
