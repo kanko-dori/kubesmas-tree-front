@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: kubesmas-front
-          image: onsd/kubesmas-front:0.6
+          image: kankodori.azurecr.io/kanko-dori/kubesmas-tree-front:10
           resources:
             requests:
               cpu: 100m
