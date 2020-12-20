@@ -1,15 +1,9 @@
-import liff from '@line/liff';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Splash } from './components/Splash';
-import { myLiffId } from "./constants";
 import TopPageContainer from './containers/TopPageContainer';
 import { LiffInfoProvider } from './LiffProvider';
 
 const App: React.FC = () => {
-    useEffect(() => {
-        liff.init({liffId: myLiffId}).catch(console.error)
-    }, [])
-
     return (
         <LiffInfoProvider>
             <Splash />
