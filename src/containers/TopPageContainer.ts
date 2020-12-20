@@ -32,28 +32,28 @@ const mapStateToProps = (appState: AppState) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         handleOnSelectValue: (value: string) => {
-            liff.init({liffId: myLiffId}).then(() => {
-                //if (!liff.isLoggedIn()) {
-                //    console.log('b')
-                //    liff.login()
-                //}
-                liff.getProfile().then(profile => {
-                    const id: string = profile.userId == null ? "AABBCCEE" : profile.userId
-                    //console.log(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
-                    if (socket.readyState === WebSocket.OPEN) {
-                        socket.send(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
-                        socket.onmessage = function (e) {
-                            const data: VoteCallbackBody = JSON.parse(e.data)
-                            //console.log(data);
-                            //投票結果のイベント発火
-                            dispatch(TextInputActions.fetchVoteData(data.currentData))
-                            //console.log(data.currentData)
-                            //投票結果のレスポンスのイベント発火
-                            dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+            //liff.init({liffId: myLiffId}).then(() => {
+            //    if (!liff.isLoggedIn()) {
+            //        liff.login()
+            //    }else {
+            //        liff.getProfile().then(profile => {
+                        const id = "AABBCCEE"
+                        //console.log(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
+                        if (socket.readyState === WebSocket.OPEN) {
+                            socket.send(`{"action":"VOTE","pattern":${value},"uid":"${id}"}`)
+                            socket.onmessage = function (e) {
+                                const data: VoteCallbackBody = JSON.parse(e.data)
+                                //console.log(data);
+                                //投票結果のイベント発火
+                                dispatch(TextInputActions.fetchVoteData(data.currentData))
+                                //console.log(data.currentData)
+                                //投票結果のレスポンスのイベント発火
+                                dispatch(TextInputActions.updateSelectedValue(data.currentData.pods))
+                            }
                         }
-                    }
-                })
-            })
+            //        })
+            //    }
+            //})
         },
 
         handleGetCurrentState: () => {
