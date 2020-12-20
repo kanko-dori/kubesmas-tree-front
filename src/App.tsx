@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Splash } from './components/Splash';
 import { myLiffId } from "./constants";
 import TopPageContainer from './containers/TopPageContainer';
+import { LiffInfoProvider } from './LiffProvider';
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -10,10 +11,10 @@ const App: React.FC = () => {
     }, [])
 
     return (
-        <React.Fragment>
+        <LiffInfoProvider>
             <Splash />
             <TopPageContainer/>
-        </React.Fragment>
+        </LiffInfoProvider>
     );
 // }
 }

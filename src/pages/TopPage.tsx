@@ -3,6 +3,7 @@ import { Calendar } from '../components/Calendar';
 import { Clock } from "../components/Clock";
 import { ShowState } from "../components/CurrentState";
 import { Hexagon } from '../components/Hexagon';
+import { LiffUser } from '../components/LiffUser';
 import { RadioInput } from "../components/RadioInput";
 import { VoteStatus } from '../components/VoteStatus';
 import { interval } from '../constants';
@@ -52,6 +53,9 @@ export class TopPage extends React.Component<Props> {
                 </Hexagon>
                 <Hexagon size={15} top={11} left={35}>
                     <Clock />
+                </Hexagon>
+                <Hexagon size={15} top={25} left={59}>
+                    <LiffUser />
                 </Hexagon>
                 <RadioInput
                     selectedValue={this.props.selectedValue}
