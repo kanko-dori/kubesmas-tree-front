@@ -61,7 +61,7 @@ export const RadioInput: React.FC<Props> = props => {
                     checked={checked === '3' ? true : false}
                 />
                 <label htmlFor="radio3" className="RadioInput-label">
-                    <span className="RadioInput-pattern-name">Rainbow</span>
+                    <span className="RadioInput-pattern-name">Random</span>
                 </label>
             </Hexagon>
         </div>
